@@ -20,5 +20,7 @@ https://fosskb.in/2017/01/14/building-a-raspberry-pi-kiosk/<br/>
 https://medium.com/@krish.raghuram/piosk-the-pi-kiosk-part-3-n-8c523319b5cc<br/>
 https://raspberrypi.stackexchange.com/questions/59310/remove-boot-messages-all-text-in-jessie<br/>
 
-The default splash.png uses Unsplash licensed elements from images by 
-https://unsplash.com/@lazycreekimages and https://unsplash.com/@markusspiske
+The default splash.png uses Unsplash licensed elements from images by<br/> 
+https://unsplash.com/@lazycreekimages<br/>
+and<br/> 
+https://unsplash.com/@markusspiske<br/>
