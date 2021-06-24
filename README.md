@@ -17,6 +17,7 @@ To change the default splash screen, drop your image in /etc/ and rename it spla
 
 # Credits and other tutorials that put me in this direction
 https://fosskb.in/2017/01/14/building-a-raspberry-pi-kiosk/
+
 https://medium.com/@krish.raghuram/piosk-the-pi-kiosk-part-3-n-8c523319b5cc
 https://raspberrypi.stackexchange.com/questions/59310/remove-boot-messages-all-text-in-jessie
 
