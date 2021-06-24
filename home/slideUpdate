@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Please Enter The URL of Today's Slide"
+read SLIDE
+sed -i "s#https://.*#$SLIDE#g" /home/pi/.xsession
+echo "Slide Updated. Rebooting."
+sleep 3s
+sudo shutdown -r now

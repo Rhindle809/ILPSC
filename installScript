@@ -1,0 +1,34 @@
+#!/bin/bash
+
+echo "
+  _____ _      _____   _____  _____ 
+ |_   _| |    |  __ \ / ____|/ ____|
+   | | | |    | |__) | (___ | |     
+   | | | |    |  ___/ \___ \| |     
+  _| |_| |____| |     ____) | |____ 
+ |_____|______|_|    |_____/ \_____|
+
+"
+
+echo "Updating System and Installing Dependencies"
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y matchbox-window-manager uzbl xinit fbi
+
+echo "Installing Scripts and Configuring"
+sudo \cp Green-Wall.png /etc/
+cd home
+sudo \cp slideUpdate /home/pi/
+sudo chmod +x /home/pi/slideUpdate
+sudo \cp uzbl.conf /home/pi/
+sudo \cp .xsession /home/pi/
+cd ..
+cd init.d
+sudo \cp aaa /etc/init.d/
+sudo chmod a+x /etc/init.d/aaa
+sudo systemctl enable aaa
+echo startx >> /home/pi/.bashrc
+sudo sed -i 's/tty1/tty3/g' /boot/cmdline.txt
+sudo sed -i 's/$/ quiet splash loglevel=0 logo.nologo/' /boot/cmdline.txt
+
+echo "Your Display is Configured. Rebooting. Use slideUpdate to Set a Slide Upon Reboot"
+sudo shutdown -r now
