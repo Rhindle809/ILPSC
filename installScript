@@ -15,7 +15,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y matchbox-window-manager uzbl xinit fbi
 
 echo "Installing Scripts and Configuring"
-sudo \cp Green-Wall.png /etc/
+sudo \cp splash.png /etc/
 cd home
 sudo \cp slideUpdate /home/pi/
 sudo chmod +x /home/pi/slideUpdate
