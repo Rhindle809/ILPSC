@@ -1,0 +1,21 @@
+#!/bin/bash
+# Now with fancy menus
+
+SLIDE=$(whiptail --clear --inputbox "Please Enter The URL of Today's Slide" 8 80 --title "Slide Update" 3>&1 1>&2 2>&3)
+exitstatus=$?
+if [ $exitstatus = 0 ];
+then
+sed -i "s#https://.*#$SLIDE#g" /home/pi/.xsession
+msgs=( "Slide Updated. Rebooting" "Slide Updated. Rebooting" "Slide Updated. Rebooting" "Slide Updated. Rebooting" "Slide Updated. Rebooting" )
+for i in {1..6}; do
+sleep 1
+echo XXX
+echo $(( i * 20 ))
+echo ${msgs[i-1]}
+echo XXX
+done |whiptail --gauge --title "Slide Update" "Slide Updated. Rebooting" 8 80 0
+sleep 3s
+sudo shutdown -r now
+else
+whiptail --msgbox --title "Slide Update" "Action Cancelled" 8 80
+fi
