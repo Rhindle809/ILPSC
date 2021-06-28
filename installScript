@@ -15,10 +15,14 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y matchbox-window-manager uzbl xinit fbi
 
 echo "Installing Scripts and Configuring"
-sudo \cp splash.png /etc/
+sudo \cp Green-Wall.png /etc/
 cd home
 sudo \cp slideUpdate /home/pi/
+sudo \cp slideUpdateBasic /home/pi/
+sudo \cp slideFix /home/pi/
 sudo chmod +x /home/pi/slideUpdate
+sudo chmod +x /home/pi/slideUpdateBasic
+sudo chmod +x /home/pi/slideFix
 sudo \cp uzbl.conf /home/pi/
 sudo \cp .xsession /home/pi/
 cd ..
@@ -26,9 +30,12 @@ cd init.d
 sudo \cp aaa /etc/init.d/
 sudo chmod a+x /etc/init.d/aaa
 sudo systemctl enable aaa
+echo 'export PATH=$PATH:/home/pi/' >> /home/pi/.bashrc
 echo startx >> /home/pi/.bashrc
+
+echo "Setting Startup Options"
 sudo sed -i 's/tty1/tty3/g' /boot/cmdline.txt
 sudo sed -i 's/$/ quiet splash loglevel=0 logo.nologo/' /boot/cmdline.txt
 
-echo "Your Display is Configured. Rebooting. Use slideUpdate to Set a Slide Upon Reboot"
+echo "Your Display is Configured. Rebooting. Use slideUpdate or slideUpdateBasic to Set a Slide Upon Reboot"
 sudo shutdown -r now
