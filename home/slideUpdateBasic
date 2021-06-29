@@ -1,5 +1,7 @@
 #!/bin/bash
+# Text Only
 
+slideFix
 echo "Please Enter The URL of Today's Slide"
 read SLIDE
 sed -i "s#https://.*#$SLIDE#g" /home/pi/.xsession
