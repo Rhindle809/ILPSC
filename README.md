@@ -15,7 +15,7 @@ I have a series of Raspberry Pi Model Zeros that I need to display daily announc
 
 # Other Stuff
 To change the default splash screen, drop your image in /etc/ and rename it splash.png<br/>
-If you remove https:// from .xsession the whole thing breaks, i've included the basic script slideFix to copy over a fresh one provided you left the ILPSC directory intact(this is recommended)
+Leave the ILPSC directory available and intact, the system relies on it
 
 # Credits and other tutorials that put me in this direction
 https://fosskb.in/2017/01/14/building-a-raspberry-pi-kiosk/<br/>
