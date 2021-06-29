@@ -1,4 +1,5 @@
 #!/bin/bash
 #Copies a over a fresh .xsession file in case you break it. This can be avoided by not removing https:// from the file but in some testing this can't be avoided
+#Runs as part of slideUpdate and slideUpdateBasic
 
 sudo \cp ILPSC/home/.xsession /home/pi/
