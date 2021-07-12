@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "
+  _____ _      _____   _____  _____ 
+ |_   _| |    |  __ \ / ____|/ ____|
+   | | | |    | |__) | (___ | |     
+   | | | |    |  ___/ \___ \| |     
+  _| |_| |____| |     ____) | |____ 
+ |_____|______|_|    |_____/ \_____|
+
+"
+echo "Please Enter the URL of Today's Slide"
+read SLIDE
+echo "Setting Screen 1"
+sshpass -p "ENTERSSHPASS" ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o LogLevel=ERROR pi@REMOTEIP "/home/pi/slideFix && sed -i s#https://.*#$SLIDE#g /home/pi/.xsession && sudo shutdown -r now"
+#echo "Setting Screen 2"
+#sshpass -p "ENTERSSHPASS" ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o LogLevel=ERROR pi@REMOTEIP "/home/pi/slideFix && sed -i s#https://.*#$SLIDE#g /home/pi/.xsession && sudo shutdown -r now"
+#echo "Setting Screen 3"
+#sshpass -p "ENTERSSHPASS" ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o LogLevel=ERROR pi@REMOTEIP "/home/pi/slideFix && sed -i s#https://.*#$SLIDE#g /home/pi/.xsession && sudo shutdown -r now"
+#echo "Setting Screen 4"
+#sshpass -p "ENTERSSHPASS" ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o LogLevel=ERROR pi@REMOTEIP "/home/pi/slideFix && sed -i s#https://.*#$SLIDE#g /home/pi/.xsession && sudo shutdown -r now"
+#echo "Setting Screen 5"
+#sshpass -p "ENTERSSHPASS" ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o LogLevel=ERROR pi@REMOTEIP "/home/pi/slideFix && sed -i s#https://.*#$SLIDE#g /home/pi/.xsession && sudo shutdown -r now"
+echo "All Screens Set"
