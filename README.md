@@ -13,6 +13,9 @@ I have a series of Raspberry Pi Model Zeros that I need to display daily announc
 6. To change the slide, run slideUpdate or slideUpdateBasic again and wait for the system to reboot
 7. Enjoy
 
+# I have a hundred Raspberry Pis, this seems like it will be a lot of work to update them all
+Included in the folder localMachine is a script for any Linux based machine(endpoint or script-server) you plan to update your screens from. Replace ENTERSSHPASS with the SSH password of your Raspberry Pi and replace REMOTEIP with the IP address of your Raspberry Pi. This script can go on as long as you need it to; i've only made a generic version of my company specific, five Pi script and commented out all but one machine, but theoretically you could update any number of machines. The script requires the sshpass package on your local machine to run.
+
 # Other Stuff
 To change the default splash screen, drop your image in /etc/ and rename it splash.png<br/>
 Leave the ILPSC directory available and intact, the system relies on it
