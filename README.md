@@ -18,7 +18,8 @@ Included in the folder localMachine is a script for any Linux based machine(endp
 
 # Other Stuff
 To change the default splash screen, drop your image in /etc/ and rename it splash.png<br/>
-Leave the ILPSC directory available and intact, the system relies on it
+Leave the ILPSC directory available and intact, the system relies on it<br/>
+This whole system has a hard dependency on the UZBL browser, other packages *may* work with tweaking, but everything is built around UZBL. Unfortunately the UZBL project is ostensibly abandoned and not available in Bullseye. You'll need to be running on top of Buster or navigate building UZBL from source.
 
 # Credits and other tutorials that put me in this direction
 https://fosskb.in/2017/01/14/building-a-raspberry-pi-kiosk/<br/>
